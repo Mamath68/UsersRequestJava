@@ -44,36 +44,17 @@ public class Films {
         this.temps = temps;
     }
 
-    public static class FilmBuilder implements IFilmBuilder {
+    public static class FilmBuilder {
         private final int id;
         private final String nom;
         private final String category;
         private final String temps;
-        private final boolean construit;
 
         public FilmBuilder(int id, String nom, String category, String temps) {
             this.id = id;
             this.nom = nom;
             this.category = category;
             this.temps = temps;
-            this.construit = false;
-
         }
-
-        @Override
-        public FilmBuilder addOptions(EUserRoles roles) {
-            return null;
-        }
-
-        @Override
-        public FilmBuilder estConstruit() {
-            return null;
-        }
-
-        @Override
-        public Films build() {
-            return new Films(this);
-        }
-
     }
 }
